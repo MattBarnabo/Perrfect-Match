@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+/* General Style */
+* {
+  font-size: 16pt;
+  margin: 0;
+  background-color: #0a2d39;
+  color: #f55477;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* Footer */
+.cat-logo-small {
+  width: 4rem;
+}
+footer {
+  background-color: #0a2d39;
+  bottom: 0;
+  color: #f55477;
+  height: 80px;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.footer-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* Header */
+.header-nav-links {
+  display: flex;
+  margin-top: 1rem;
+
+}
+.nav {
+  justify-content: space-between;
+  background-color: #0a2d39;
+  height: 110px;
+}
+.nav-link {
+  background-image: linear-gradient(#f55477, #f51955) !important;
+  color:#0a2d39 !important;
+  display: inline-block !important;
+  margin-top: 25px;
+  margin-left: 4px;
+  margin-right: 10px;
+  border-radius: 10px;
+
+
+}
+.perrfect-match-logo {
+  margin: 0;
+  width: 5rem;
+}
+
+
+/* Not Found */
+.image {
+  max-width:600px;
+  max-height: 600px;
+}
+.message {
+  width: 500px;
+  padding-top: 6rem;
+  padding-left: 1rem;
+}
+.not-found-content {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  height: 600px;
 }
