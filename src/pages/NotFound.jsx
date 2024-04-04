@@ -1,9 +1,8 @@
 import React from 'react'
 
-const NotFound = () => {
-  let randomNumber = Math.ceil(Math.random()*3)
+const NotFound = ({randomNumber}) => {
   const message = () => {
-    const message1 = "404: Oops! Looks like this cool cat  has wandered off with the page you're seeking!"
+    const message1 = "404: Oops! Looks like this cool cat has wandered off with the page you're seeking!"
     const message2 = "404: The cool cat you're looking for is currently sunbathing elsewhere."
     const message3 = "404: This page is on a catnap. Let's find another spot to lounge!"
       if(randomNumber === 1) {
@@ -32,7 +31,7 @@ const NotFound = () => {
       <div className="not-found-content">
         <div>
           <img src={image()}
-          alt="cat"
+          alt="cool cat"
           className="image"
           />
         </div>
