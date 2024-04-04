@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import { Form, FormGroup, Label, Button, Row, Col} from "reactstrap"
 import { useForm } from "react-hook-form"
 import { useNavigate } from "react-router-dom"
@@ -48,7 +48,7 @@ const CatNew = ({ createNewCat }) => {
             type="number"
             min="0"
             {...register("age", { required: true })}
-            className='form-control'
+            className="form-control"
           />
             {errors.age &&(
               <span className="form-validation">Age is required</span>)}
@@ -62,7 +62,7 @@ const CatNew = ({ createNewCat }) => {
         name="enjoys"
         placeholder="Enjoys"
         type="text"
-        className='form-control'
+        className="form-control"
         {...register("enjoys", { required: true })}
       />
         {errors.enjoys &&(
@@ -77,17 +77,17 @@ const CatNew = ({ createNewCat }) => {
         name="image"
         placeholder="Image URL"
         type="text"
-        className='form-control'
+        className="form-control"
         {...register("image", { required: true })}
       />
       {errors.image &&(
               <span className="form-validation">Image URL is required</span>)}
     </FormGroup>
-    <div className='centering-content'>
+    <div className="centering-content">
       <Button
-      className='nav-button'
+      className="nav-button"
       onClick={handleSubmit}
-      type='submit'
+      type="submit"
       >
         Submit
       </Button>
