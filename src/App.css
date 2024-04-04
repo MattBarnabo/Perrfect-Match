@@ -1,11 +1,12 @@
 /* General Style */
 * {
   font-size: 16pt;
+  font-family: "Baloo 2", sans-serif;
+  font-optical-sizing: auto;
   margin: 0;
   background-color: #0a2d39;
   color: #f55477;
 }
-
 
 /* Footer */
 .cat-logo-small {
@@ -15,12 +16,13 @@ footer {
   background-color: #0a2d39;
   bottom: 0;
   color: #f55477;
+  font-weight: 800;
+  font-style: normal;
   height: 80px;
   padding: 10px;
   position: fixed;
   width: 100%;
 }
-
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -31,27 +33,53 @@ footer {
 .header-nav-links {
   display: flex;
   margin-top: 1rem;
-
 }
 .nav {
   justify-content: space-between;
   background-color: #0a2d39;
+  font-weight: 800;
+  font-style: normal;
   height: 110px;
+  position: sticky;
 }
 .nav-link {
   background-image: linear-gradient(#f55477, #f51955) !important;
+  border-radius: 10px;
   color:#0a2d39 !important;
   display: inline-block !important;
   margin-top: 25px;
   margin-left: 4px;
   margin-right: 10px;
-  border-radius: 10px;
-
-
 }
 .perrfect-match-logo {
   margin: 0;
   width: 5rem;
+}
+
+/* Home */
+.curved-text {
+  margin-top: -100px;
+}
+.home-logo {
+  display: flex;
+  margin-top: -1275px;
+  margin-left: 500px;
+  width: 30%;
+ height: 30%;
+  place-content: center;
+}
+.home-slider {
+  display: flex;
+  place-content: center;
+margin-top: 10px;
+  margin-left: 610px;
+}
+path {
+  fill: transparent;
+}
+text {
+  fill:#f55477 !important;
+
 }
 
 
@@ -64,6 +92,8 @@ footer {
   width: 500px;
   padding-top: 6rem;
   padding-left: 1rem;
+  font-weight: 800;
+  font-style: normal;
 }
 .not-found-content {
   display: flex;

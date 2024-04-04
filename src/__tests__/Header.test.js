@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from  "@testing-library/react"
 import { BrowserRouter} from "react-router-dom"
 import Header from "../components/Header"
-import pmlLarge from "../assets/Logos/pmlLarge.png"
+import Logo from "../assets/Logos/pmlsmall.png"
 
 test("render the Header component", () => {
   render(
@@ -11,13 +11,13 @@ test("render the Header component", () => {
     </BrowserRouter>
   )
   const headerPerrfectMatchLogo = screen.getByAltText(
-    "logo of a cat with a heart in a circle and the name perrfect match adopt a cat below"
+    "logo of cat with heart in a circle"
   )
   expect(headerPerrfectMatchLogo).toBeInTheDocument()
-  expect(headerPerrfectMatchLogo).toHaveAttribute("src", pmlLarge)
+  expect(headerPerrfectMatchLogo).toHaveAttribute("src", Logo)
   expect(
     screen.getByRole("link", {
-      name: "logo of a cat with a heart in a circle and the name perrfect match adopt a cat below"
+      name: "logo of cat with heart in a circle"
     })
   ).toHaveAttribute("href", "/")
 
