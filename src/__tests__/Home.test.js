@@ -28,6 +28,6 @@ test("render the Home component", () => {
     })
   ).toHaveAttribute("href", "/cat-index")
 
-  const svgHomeCurvedText = screen.getByText("Are You Ready To Meet Your Perrrrfect Match?");
+  const svgHomeCurvedText = screen.getByText("Are You Ready To Meet Your Perrfect Match");
   expect(svgHomeCurvedText).toBeInTheDocument();
 })
