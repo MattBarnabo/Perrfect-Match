@@ -15,7 +15,7 @@ import mockCats from "./mockCats"
 const App = () => {
   const [cats, setCats] = useState(mockCats)
 
-   let randomNumber = Math.ceil(Math.random()*3)
+  let randomNumber = Math.ceil(Math.random()*3)
   return (
     <div>
       <Header />
