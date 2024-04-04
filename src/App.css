@@ -4,10 +4,29 @@
   font-family: "Baloo 2", sans-serif;
   font-optical-sizing: auto;
   margin: 0;
-  background-color: #0a2d39;
-  color: #f55477;
 }
 
+body {
+  background-color: #0a2d39 !important;
+  color: #f55477 !important;
+}
+.page-body {
+  text-align: center;
+  margin-bottom: 7rem;
+}
+.page-title {
+  display: flex;
+  justify-content: center;
+}
+/* Button */
+.nav-button {
+  background-image: linear-gradient(#f55477, #f51955) !important;
+  color: #0a2d39;
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-size: x-large;
+  margin: 1rem;
+}
 /* Footer */
 .cat-logo-small {
   width: 4rem;
@@ -65,7 +84,7 @@ footer {
   margin-top: -1275px;
   margin-left: 500px;
   width: 30%;
- height: 30%;
+  height: 30%;
   place-content: center;
 }
 .home-slider {
@@ -100,4 +119,47 @@ text {
   display: flex;
   justify-content: center;
   height: 600px;
+}
+
+/* Index */
+.card {
+  text-align: center;
+  background-color: #f09aad !important;
+  margin-bottom: 2rem;
+  width: 14rem;
+  box-shadow: 1px 1px #d7d1de;
+}
+.index-cat-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: #0a2d39;
+}
+.index-card-text {
+  color: #0a2d39 !important;
+}
+.index-profile-image-container {
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 1%;
+}
+.index-profile-image {
+  object-fit: cover ;
+  height: 400px;
+  width: 300px;
+}
+
+/* New */
+.new-page-body {
+  max-width:1500px;
+  margin-bottom: 7rem;
+  margin: 0 6rem;
+}
+.centering-content {
+  text-align: center;
+}
+
+/* Show */
+.show-cat-profile {
+  width:20rem;
 }

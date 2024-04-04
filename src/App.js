@@ -14,16 +14,18 @@ import mockCats from "./mockCats"
 
 const App = () => {
   const [cats, setCats] = useState(mockCats)
-
+  const createNewCat = (newCat) => {
+    console.log(newCat);
+  }
   let randomNumber = Math.ceil(Math.random()*3)
   return (
     <div>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cat-index" element={<CatIndex />} />
-        <Route path="/cat-show" element={<CatShow />} />
-        <Route path="/cat-new" element={<CatNew />} />
+        <Route path="/cat-index" element={<CatIndex cats={cats} />} />
+        <Route path="/cat-show/:id" element={<CatShow  cats={cats}/>} />
+        <Route path="/cat-new" element={<CatNew createNewCat={createNewCat} />} />
         <Route path="/cat-edit" element={<CatEdit />} />
         <Route path="*" element={<NotFound randomNumber = {randomNumber} />} />
       </Routes>
