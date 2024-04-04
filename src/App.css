@@ -72,7 +72,7 @@ footer {
   display: flex;
   place-content: center;
 margin-top: 10px;
-  margin-left: 610px;
+  margin-left: -10px;
 }
 path {
   fill: transparent;
