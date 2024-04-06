@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Header from './components/Header'
 import Home from './pages/Home'
-import CatIndex from './pages/CatIndex2'
+import CatIndex from './pages/CatIndex'
 import CatShow from './pages/CatShow'
 import CatNew from './pages/CatNew'
 import CatEdit from './pages/CatEdit'
