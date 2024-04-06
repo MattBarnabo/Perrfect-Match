@@ -74,12 +74,12 @@ const Advanced = ({ cats }) => {
                 onSwipe={(dir) => swiped(dir, cat.name, index)}
                 onCardLeftScreen={() => outOfFrame(cat.name, index)}
             >
-                <div
+                {/* <div
                 style={{ backgroundImage: 'url(' + cat.image + ')' }}
                 className='card'
                 >
                 <h3>{cat.name}</h3>
-                </div>
+                </div> */}
             </TinderCard>
             ))}
         </div>
