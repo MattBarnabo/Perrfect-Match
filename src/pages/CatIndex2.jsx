@@ -1,13 +1,14 @@
 import React, { useState, useMemo, useRef } from 'react'
 import TinderCard from 'react-tinder-card'
-import "../components/card/flip-transition.css";
 import "../App.css"
+import NavButton from '../components/NavButton';
 
 
 
 const Advanced = ({ onClick, cats }) => {
   const [currentIndex, setCurrentIndex] = useState(cats.length - 1)
   const [lastDirection, setLastDirection] = useState()
+  const [showFront, setShowFront] = useState(true);
   // used for outOfFrame closure
   const currentIndexRef = useRef(currentIndex)
 
@@ -58,7 +59,7 @@ const Advanced = ({ onClick, cats }) => {
   }
 
   return (
-    <div>
+    <div className='index-page'>
       <link
         href='https://fonts.googleapis.com/css?family=Damion&display=swap'
         rel='stylesheet'
@@ -68,34 +69,38 @@ const Advanced = ({ onClick, cats }) => {
         rel='stylesheet'
       />
       <h1 className='index-header'>Perrfect Match</h1>
-      <div className='swipecontainer'>
-        <div className='cardContainer card'>
             {cats.map((cat, index) => (
-            <TinderCard 
-                onClick={onClick}
+              <TinderCard
                 ref={childRefs[index]}
                 className='swipe'
                 key={cat.name}
                 onSwipe={(dir) => swiped(dir, cat.name, index)}
                 onCardLeftScreen={() => outOfFrame(cat.name, index)}
-            >
+                >
+      <div className='flip-card-container'>
+      <div className='flip-card'>
+        <div className='flip-card-inner'>
+                  <div className='flip-card-back'>
+                <ul className='flip-card-back-ul'>
+                    <li><h3>{cat.name}</h3></li>
+                    <li><h4>Age: {cat.age}</h4></li>
+                    <li><p>Enjoys: {cat.enjoys}</p></li>
+                    <li><NavButton className= "flip-card-button"
+                    url={`/cat-show/${cat.id}`}
+              buttonContent="Adopt Me" /></li>
+                </ul>
+                </div>
                 <div
                 style={{ backgroundImage: 'url(' + cat.image + ')' }}
-                className='card card-front'
+                className='flip-card-front card'
                 >
                 <h3>{cat.name}</h3>
                 </div>
-                <div className='card-back'>
-                <ul>
-                    <li>{cat.name}</li>
-                    <li>{cat.age}</li>
-                    <li>{cat.enjoys}</li>
-                </ul>
-                </div>
-            </TinderCard>
-            ))}
         </div>
       </div>
+        </div>
+            </TinderCard>
+            ))}
         <div className='buttons'>
             <button style={{ backgroundColor: !canSwipe && '#f51955' }} onClick={() => swipe('left')}>Swipe left!</button>
             <button style={{ backgroundColor: !canGoBack && '#f55477' }} onClick={() => goBack()}>Undo swipe!</button>
