@@ -33,7 +33,7 @@ const CatNew = ({ createNewCat }) => {
             {...register("name", { required: true })}
           />
           {errors.name &&(
-            <span className="form-validation">Name is required</span>)}
+            <span>Name is required</span>)}
         </FormGroup>
       </Col>
       <Col md={6}>
@@ -49,27 +49,27 @@ const CatNew = ({ createNewCat }) => {
             min="0"
             {...register("age", { required: true })}
             className="form-control"
-          />
+            />
             {errors.age &&(
-              <span className="form-validation">Age is required</span>)}
+            <span>Age is required</span>)}
         </FormGroup>
       </Col>
     </Row>
     <FormGroup>
-      <Label for="enjoys">What does your cat enjoy doing?</Label>
+      <Label className="enjoys-text" for="enjoys">What does your cat enjoy doing?</Label>
       <input
         id="enjoys"
         name="enjoys"
         placeholder="Enjoys"
         type="text"
-        className="form-control"
+        className="form-control input-field"
         {...register("enjoys", { required: true })}
       />
         {errors.enjoys &&(
-              <span className="form-validation">Enjoys is required</span>)}
+              <span className="enjoys-error">Enjoys is required</span>)}
     </FormGroup>
     <FormGroup>
-      <Label for="image">
+      <Label className="image-text" for="image">
         Image URL
       </Label>
       <input
@@ -77,11 +77,11 @@ const CatNew = ({ createNewCat }) => {
         name="image"
         placeholder="Image URL"
         type="text"
-        className="form-control"
+        className="form-control input-field"
         {...register("image", { required: true })}
       />
       {errors.image &&(
-              <span className="form-validation">Image URL is required</span>)}
+              <span className="image-error">Image URL is required</span>)}
     </FormGroup>
     <div className="centering-content">
       <Button
