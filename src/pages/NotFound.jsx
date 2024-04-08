@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const NotFound = ({randomNumber}) => {
   const message = () => {
@@ -30,13 +30,14 @@ const NotFound = ({randomNumber}) => {
     <>
       <div className="not-found-content">
         <div>
-          <img src={image()}
-          alt="cool cat"
-          className="image"
+          <img
+            src={image()}
+            alt="cool cat"
+            className="image"
           />
         </div>
         <div className="not-found-title">
-            <h3 className="message">{message()}</h3>
+          <h3 className="message">{message()}</h3>
         </div>
       </div>
     </>

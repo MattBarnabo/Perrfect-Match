@@ -97,8 +97,11 @@ footer {
 .home-slider {
   display: flex;
   place-content: center;
-  margin-top: 10px;
+  margin-top: -80px;
   margin-left: -10px;
+}
+.home-slider:hover {
+  transform: scale(1.05);
 }
 path {
   fill: transparent;
@@ -127,8 +130,7 @@ text {
   height: 600px;
 }
 
-/* Index */
-/* Card Swipe*/
+/* Index Card Swipe*/
 .index-page {
   width: auto;
   height: 800px;
@@ -190,7 +192,7 @@ h1 {
   100% { transform: scale(1,1) }
 }
 
-/* Card Flip */
+/* Index Card Flip */
 .flip-card-container {
   margin-left: 590px;
   position: absolute !important;

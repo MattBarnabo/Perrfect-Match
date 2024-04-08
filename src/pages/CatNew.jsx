@@ -12,89 +12,92 @@ const CatNew = ({ createNewCat }) => {
   } = useForm()
 
   const onSubmit = (catData) => {
-  createNewCat(catData)
-  navigate("/cat-index")
+    createNewCat(catData)
+    navigate("/cat-index")
   }
+
   return (
-<div className="new-page-body">
-  <h2 className="page-title centering-content">Add a Cat</h2>
-  <Form onSubmit={handleSubmit(onSubmit)}>
-    <Row>
-      <Col md={6}>
+    <div className="new-page-body">
+      <h2 className="page-title centering-content">Add a Cat</h2>
+      <Form onSubmit={handleSubmit(onSubmit)}>
+        <Row>
+          <Col md={6}>
+            <FormGroup>
+              <Label for="name">Enter Your Cat's Name</Label>
+              <input
+                id="name"
+                name="name"
+                placeholder="Name"
+                type="text"
+                min="0"
+                className="form-control"
+                {...register("name", { required: true })}
+              />
+              {errors.name &&(
+                <span>Name is required</span>)}
+          </FormGroup>
+          </Col>
+          <Col md={6}>
+            <FormGroup>
+              <Label for="age">
+                Enter Your Cat's Age
+              </Label>
+              <input
+                id="age"
+                name="age"
+                placeholder="Age"
+                type="number"
+                min="0"
+                {...register("age", { required: true })}
+                className="form-control"
+              />
+              {errors.age &&(
+                <span>Age is required</span>)}
+            </FormGroup>
+          </Col>
+        </Row>
         <FormGroup>
-          <Label for="name">Enter Your Cat's Name</Label>
-          <input
-            id="name"
-            name="name"
-            placeholder="Name"
-            type="text"
-            min="0"
-            className="form-control"
-            {...register("name", { required: true })}
-          />
-          {errors.name &&(
-            <span>Name is required</span>)}
-        </FormGroup>
-      </Col>
-      <Col md={6}>
-        <FormGroup>
-          <Label for="age">
-            Enter Your Cat's Age
+          <Label className="enjoys-text" for="enjoys">
+            What does your cat enjoy doing?
           </Label>
           <input
-            id="age"
-            name="age"
-            placeholder="Age"
-            type="number"
-            min="0"
-            {...register("age", { required: true })}
-            className="form-control"
-            />
-            {errors.age &&(
-            <span>Age is required</span>)}
+            id="enjoys"
+            name="enjoys"
+            placeholder="Enjoys"
+            type="text"
+            className="form-control input-field"
+            maxLength={30}
+            {...register("enjoys", { required: true })}
+          />
+          {errors.enjoys &&(
+            <span className="enjoys-error">Enjoys is required</span>)}
         </FormGroup>
-      </Col>
-    </Row>
-    <FormGroup>
-      <Label className="enjoys-text" for="enjoys">What does your cat enjoy doing?</Label>
-      <input
-        id="enjoys"
-        name="enjoys"
-        placeholder="Enjoys"
-        type="text"
-        className="form-control input-field"
-        maxLength={30}
-        {...register("enjoys", { required: true })}
-      />
-        {errors.enjoys &&(
-              <span className="enjoys-error">Enjoys is required</span>)}
-    </FormGroup>
-    <FormGroup>
-      <Label className="image-text" for="image">
-        Image URL
-      </Label>
-      <input
-        id="image"
-        name="image"
-        placeholder="Image URL"
-        type="text"
-        className="form-control input-field"
-        {...register("image", { required: true })}
-      />
-      {errors.image &&(
-              <span className="image-error">Image URL is required</span>)}
-    </FormGroup>
-    <div className="centering-content">
-      <Button
-      className="nav-button"
-      onClick={handleSubmit}
-      type="submit"
-      >
-        Submit
-      </Button>
+        <FormGroup>
+          <Label className="image-text" for="image">
+            Image URL
+          </Label>
+          <input
+            id="image"
+            name="image"
+            placeholder="Image URL"
+            type="text"
+            className="form-control input-field"
+            {...register("image", { required: true })}
+          />
+          {errors.image &&(
+            <span className="image-error">Image URL is required</span>)}
+        </FormGroup>
+          <div className="centering-content">
+            <Button
+              className="nav-button"
+              onClick={handleSubmit}
+              type="submit"
+            >
+              Submit
+            </Button>
+          </div>
+      </Form>
     </div>
-  </Form>
-</div>
   )
 }
 
