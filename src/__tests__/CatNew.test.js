@@ -13,12 +13,12 @@ test("render the CatNew component", () => {
   expect(catNameHeader).toBeInTheDocument()
 
   const catNameInput = screen.getByLabelText(
-    "Enter Your Cats Name"
+    "Enter Your Cat's Name"
   )
   expect(catNameInput).toBeInTheDocument()
 
   const catAgeInput = screen.getByLabelText(
-    "Enter Your Cats Age"
+    "Enter Your Cat's Age"
   )
   expect(catAgeInput).toBeInTheDocument()
 

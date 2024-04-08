@@ -22,7 +22,7 @@ const CatNew = ({ createNewCat }) => {
     <Row>
       <Col md={6}>
         <FormGroup>
-          <Label for="name">Enter Your Cats Name</Label>
+          <Label for="name">Enter Your Cat's Name</Label>
           <input
             id="name"
             name="name"
@@ -39,7 +39,7 @@ const CatNew = ({ createNewCat }) => {
       <Col md={6}>
         <FormGroup>
           <Label for="age">
-            Enter Your Cats Age
+            Enter Your Cat's Age
           </Label>
           <input
             id="age"
@@ -63,6 +63,7 @@ const CatNew = ({ createNewCat }) => {
         placeholder="Enjoys"
         type="text"
         className="form-control input-field"
+        maxLength={30}
         {...register("enjoys", { required: true })}
       />
         {errors.enjoys &&(
