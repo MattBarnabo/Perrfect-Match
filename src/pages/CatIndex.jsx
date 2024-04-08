@@ -5,10 +5,9 @@ import NavButton from '../components/NavButton';
 
 
 
-const Advanced = ({ onClick, cats }) => {
+const Advanced = ({ cats }) => {
   const [currentIndex, setCurrentIndex] = useState(cats.length - 1)
   const [lastDirection, setLastDirection] = useState()
-  const [showFront, setShowFront] = useState(true);
   // used for outOfFrame closure
   const currentIndexRef = useRef(currentIndex)
 
@@ -78,26 +77,26 @@ const Advanced = ({ onClick, cats }) => {
                 onCardLeftScreen={() => outOfFrame(cat.name, index)}
                 >
       <div className='flip-card-container'>
-      <div className='flip-card'>
-        <div className='flip-card-inner'>
-                  <div className='flip-card-back'>
-                <ul className='flip-card-back-ul'>
-                    <li><h3>{cat.name}</h3></li>
-                    <li><h4>Age: {cat.age}</h4></li>
-                    <li><p>Enjoys: {cat.enjoys}</p></li>
-                    <li><NavButton className= "flip-card-button"
-                    url={`/cat-show/${cat.id}`}
-              buttonContent="Adopt Me" /></li>
-                </ul>
-                </div>
-                <div
-                style={{ backgroundImage: 'url(' + cat.image + ')' }}
-                className='flip-card-front card'
-                >
-                <h3>{cat.name}</h3>
-                </div>
-        </div>
-      </div>
+        <div className='flip-card'>
+          <div className='flip-card-inner'>
+                    <div className='flip-card-back'>
+                  <ul className='flip-card-back-ul'>
+                      <li><h3>{cat.name}</h3></li>
+                      <li><h4>Age: {cat.age}</h4></li>
+                      <li><p>Enjoys: {cat.enjoys}</p></li>
+                      <li><NavButton className= "flip-card-button"
+                      url={`/cat-show/${cat.id}`}
+                buttonContent="See More" /></li>
+                  </ul>
+                  </div>
+                  <div
+                  style={{ backgroundImage: 'url(' + cat.image + ')' }}
+                  className='flip-card-front card'
+                  >
+                  <h3>{cat.name}</h3>
+                  </div>
+            </div>
+          </div>
         </div>
             </TinderCard>
             ))}
