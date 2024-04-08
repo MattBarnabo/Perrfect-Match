@@ -10,15 +10,14 @@ test('renders the CatIndex components', () => {
       <CatIndex cats={mockCats} />
     </BrowserRouter>
   )
-  const indexTitle = screen.getByText("Meet your Perrfect Match")
+  const indexTitle = screen.getByText("Perrfect Match")
   expect(indexTitle).toBeInTheDocument()
 
   mockCats.forEach((cat) => {
-    const catName = screen.getByText(cat.name)
-    expect(catName).toBeInTheDocument()
+    const catName = screen.getAllByText(cat.name)
+    expect(catName).toHaveLength(2)
 
-    const catImage = screen.getByAltText(`profile of a cat named ${cat.name}`)
+    const catImage = screen.getByLabelText(`Profile of a cat named ${cat.name}`)
     expect(catImage).toBeInTheDocument()
-    expect(catImage).toHaveAttribute("src", cat.image)
   })
 })
