@@ -13,16 +13,16 @@ const Header = () => {
             alt= "logo of cat with heart in a circle"
             className= "perrfect-match-logo"
           />
-          </NavLink>
+        </NavLink>
       </div>
       <div className= "header-nav-link">
         <NavLink to= "/cat-new" className= "nav-link" >
           Add a Cat
         </NavLink>
         <a
-        href="https://purrfectmatchcatrescue.org/donate?gad_source=1&gclid=CjwKCAjw_LOwBhBFEiwAmSEQAX3HmXgZ5a_mRYW6YEAA4mYh44P2QuiMWTrwcTPVgpTZUHPIvPuP8hoCtswQAvD_Bw"
-        target= "blank"
-        className= "nav-link"
+          href="https://purrfectmatchcatrescue.org/donate?gad_source=1&gclid=CjwKCAjw_LOwBhBFEiwAmSEQAX3HmXgZ5a_mRYW6YEAA4mYh44P2QuiMWTrwcTPVgpTZUHPIvPuP8hoCtswQAvD_Bw"
+          target= "blank"
+          className= "nav-link"
         >
           Adopt a Cat
         </a>

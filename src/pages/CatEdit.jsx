@@ -13,6 +13,7 @@ const CatEdit = ({cats, updateCat}) => {
     enjoys: cat.enjoys,
     image: cat.image
   }
+
   const {
     register,
     handleSubmit,
@@ -25,6 +26,7 @@ const CatEdit = ({cats, updateCat}) => {
     updateCat(catData, cat.id)
     navigate(`/cat-show ${cat.id}`)
   }
+
     return (
       <div className="new-page-body">
         <h2 className="page-title centering-content">Edit {cat.name}</h2>
@@ -59,14 +61,19 @@ const CatEdit = ({cats, updateCat}) => {
                   min="0"
                   {...register("age", { required: true })}
                   className="form-control"
-                  />
-                  {errors.age &&(
-                  <span>Age is required</span>)}
+                />
+                {errors.age &&(
+                  <span>
+                    Age is required
+                  </span>
+                )}
               </FormGroup>
             </Col>
           </Row>
           <FormGroup>
-            <Label className="enjoys-text" for="enjoys">What does your cat enjoy doing?</Label>
+            <Label className="enjoys-text"
+              for="enjoys">What does your cat enjoy doing?
+            </Label>
             <input
               id="enjoys"
               name="enjoys"
@@ -76,8 +83,11 @@ const CatEdit = ({cats, updateCat}) => {
               className="form-control input-field"
               {...register("enjoys", { required: true })}
             />
-              {errors.enjoys &&(
-                    <span className="enjoys-error">Enjoys is required</span>)}
+            {errors.enjoys &&(
+              <span className="enjoys-error">
+                Enjoys is required
+              </span>
+            )}
           </FormGroup>
           <FormGroup>
             <Label className="image-text" for="image">
@@ -92,13 +102,16 @@ const CatEdit = ({cats, updateCat}) => {
               {...register("image", { required: true })}
             />
             {errors.image &&(
-                    <span className="image-error">Image URL is required</span>)}
+              <span className="image-error">
+                Image URL is required
+              </span>
+            )}
           </FormGroup>
           <div className="centering-content">
             <Button
-            className="nav-button"
-            onClick={handleSubmit}
-            type="submit"
+              className="nav-button"
+              onClick={handleSubmit}
+              type="submit"
             >
               Submit
             </Button>
