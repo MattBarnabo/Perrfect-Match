@@ -24,7 +24,7 @@ const CatEdit = ({cats, updateCat}) => {
 
   const onSubmit = (catData) => {
     updateCat(catData, cat.id)
-    navigate(`/cat-show ${cat.id}`)
+    navigate(`/cat-show/${cat.id}`)
   }
 
     return (
