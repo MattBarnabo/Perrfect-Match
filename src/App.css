@@ -100,6 +100,9 @@ footer {
   margin-top: -80px;
   margin-left: -10px;
 }
+.home-slider:hover {
+  transform: scale(1.05);
+}
 path {
   fill: transparent;
 }

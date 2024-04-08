@@ -12,7 +12,7 @@ const Index = ({ cats }) => {
     () =>
       Array(cats.length)
         .fill(0)
-        .map((i) => React.createRef()),
+        .map((i) => React.createRef(i)),
     []
   )
 
@@ -51,19 +51,10 @@ const Index = ({ cats }) => {
 
   return (
     <div className="index-page">
-      <link
-        href="https://fonts.googleapis.com/css?family=Damion&display=swap"
-        rel="stylesheet"
-      />
-      <link
-        href="https://fonts.googleapis.com/css?family=Alatsi&display=swap"
-        rel="stylesheet"
-      />
       <h1 className="index-header">Perrfect Match</h1>
       {cats.map((cat, index) => (
         <TinderCard
           ref={childRefs[index]}
-          className="swipe"
           key={cat.name}
           onSwipe={(dir) => swiped(dir, cat.name, index)}
           onCardLeftScreen={() => outOfFrame(cat.name, index)}
