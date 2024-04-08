@@ -21,13 +21,10 @@ const Index = ({ cats }) => {
     currentIndexRef.current = cats.length - 1
   }, [cats.length])
 
-  console.log(cats);
-
   const updateCurrentIndex = (val) => {
     setCurrentIndex(val)
     currentIndexRef.current = val
   }
-  console.log(currentIndex);
 
   const canGoBack = currentIndex < cats.length - 1
 
