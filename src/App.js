@@ -48,6 +48,8 @@ const App = () => {
     }
   }
   const updateCat = async (editCat, id) => {
+    console.log("editCat:", editCat);
+    console.log("id:", id);
     try {
       const patchResponse = await fetch(`http://localhost:3000/cats/${id}`, {
         method: "PATCH",
