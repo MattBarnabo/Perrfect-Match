@@ -82,8 +82,9 @@ const Index = ({ cats }) => {
                   </ul>
                 </div>
                 <div
-                  style={{ backgroundImage:
-                    "url(" + cat.image + ")" }}
+                  style={{ backgroundImage: 
+                  "url(" + cat.image + ")" }} 
+                  aria-label={ `Profile of a cat named ${cat.name}`}
                   className="flip-card-front card"
                 >
                   <h3>{cat.name}</h3>
