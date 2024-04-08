@@ -20,12 +20,14 @@ body {
 
 /* Button */
 .nav-button {
-  background-image: linear-gradient(#f55477, #f51955) !important;
-  color: #0a2d39;
+  background-color: #9198e5 !important;
+  color: #f8f9fa;
   border-radius: 20px;
   padding: 10px 25px;
   font-size: x-large;
-  margin: 1rem;
+}
+.nav-button:hover {
+  transform: scale(1.05);
 }
 
 /* Footer */
@@ -69,6 +71,9 @@ footer {
   margin-top: 25px;
   margin-left: 4px;
   margin-right: 10px;
+}
+.nav-link:hover {
+  transform: scale(1.05);
 }
 .perrfect-match-logo {
   margin: 0;
@@ -121,7 +126,7 @@ text {
 }
 
 /* Index */
-.card {
+/* .card {
   text-align: center;
   background-color: #f09aad !important;
   margin-bottom: 2rem;
@@ -146,22 +151,176 @@ text {
   object-fit: cover ;
   height: 400px;
   width: 300px;
-}
+} */
 
 /* New */
-.form-validations {
-  color:red !important;
-}
 .new-page-body {
-  max-width:1500px;
-  margin-bottom: 7rem;
-  margin: 0 6rem;
+  padding-left: 400px;
+  width: 1000px;
+  margin-top: -10px;
+  height: 800px;
 }
 .centering-content {
   text-align: center;
 }
+.row {
+display: flex;
+justify-content: center;
+text-align: center;
+}
+.input-field {
+  width:100% !important;
+}
+.enjoys-text {
+margin-left: 160px;
+}
+.image-text {
+margin-left: 255px;
+}
+.enjoys-error {
+  margin-left: 225px;
+}
+.image-error {
+  margin-left: 205px;
+}
 
 /* Show */
-.show-cat-profile {
-  width:20rem;
+.show-cat-image {
+  width:300px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+.show-text {
+  list-style-type: none;
+  margin-top: 100px;
+  padding-right: 20px;
+}
+.show-profile {
+  width: 1000px;
+  height: 450px;
+  display: flex;
+  justify-content: end;
+  margin-top: 30px;
+  margin-left: 150px;
+}
+
+/* Card Swipe*/
+.index-page {
+  width: auto;
+  height: 800px;
+}
+h1 {
+  text-align: center;
+}
+.card {
+  width: 80vw !important;
+  max-width: 260px !important;
+  height: 300px !important;
+  box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.30);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+}
+.card h3 {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+}
+.infoText {
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  animation-name: popup;
+  animation-duration: 800ms;
+}
+.buttons {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 340px;
+}
+.buttons button {
+  flex-shrink: 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  background-color: #9198e5;
+  transition: 200ms;
+  margin: 10px;
+  font-weight: bolder;
+  width: 160px;
+  box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.10);
+}
+.buttons button:hover {
+  transform: scale(1.05);
+}
+@keyframes popup {
+  0%   { transform: scale(1,1) }
+  10%  { transform: scale(1.1,1.1) }
+  30%  { transform: scale(.9,.9) }
+  50%  { transform: scale(1,1) }
+  57%  { transform: scale(1,1) }
+  64%  { transform: scale(1,1) }
+  100% { transform: scale(1,1) }
+}
+/* Card Flip */
+.flip-card-container {
+ margin-left: 590px;
+  position: absolute !important;
+}
+.flip-card {
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+}
+.flip-card-inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 90vw;
+  max-width: 260px;
+  height: 300px;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute !important;
+  border: 5px solid white;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-back{
+  transform: rotateY(180deg);
+  background-color: #f55477;
+  height: 300px;
+  width: 260px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  font-size: 60px;
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+}
+.flip-card-back-ul {
+  list-style-type: none;
+  text-align: center;
+padding-right: 50px;
+overflow: hidden;
+}
+.flip-card-front {
+  background-color: #73d0ff;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+}
+.flip-card-button {
+  background-color: #9198e5 !important;
+  border-radius: 5px !important;
+  border: none !important;
+  color: #fff !important;
+  font-size: 18px !important;
 }

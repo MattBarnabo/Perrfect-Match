@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Header from './components/Header'
 import Home from './pages/Home'
-import CatIndex from './pages/CatIndex1'
+import CatIndex from './pages/CatIndex'
 import CatShow from './pages/CatShow'
 import CatNew from './pages/CatNew'
 import CatEdit from './pages/CatEdit'
@@ -10,7 +10,9 @@ import Footer from './components/Footer'
 import { Routes, Route } from 'react-router-dom'
 import "./App.css"
 import mockCats from "./mockCats"
-import "./tinder.css"
+
+
+
 
 
 const App = () => {
