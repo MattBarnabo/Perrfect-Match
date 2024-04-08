@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import NavButton from "../components/NavButton"
 
 const CatShow = ({ cats, deleteCat }) => {
+  console.log(cats);
   const navigate = useNavigate()
   const { id } = useParams()
   const cat = cats.find((catObject) => catObject.id === +id)
@@ -34,7 +35,7 @@ const CatShow = ({ cats, deleteCat }) => {
           </li>
           <li>
             <button
-              onClick={handleDeleteCat(cat.id)}
+              onClick={handleDeleteCat}
               className="nav-button show-button"
             >
               Delete {cat.name}
