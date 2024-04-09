@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef } from "react"
+import React, { useState, useMemo, useRef, useEffect } from "react"
 import TinderCard from "react-tinder-card"
 import NavButton from "../components/NavButton";
 import "../App.css"
@@ -11,10 +11,15 @@ const Index = ({ cats }) => {
   const childRefs = useMemo(
     () =>
       Array(cats.length)
-        .fill(0)
-        .map((i) => React.createRef(i)),
-    []
+        .fill()
+        .map(() => React.createRef()),
+    [cats.length]
   )
+
+  useEffect(() => {
+    setCurrentIndex(cats.length - 1)
+    currentIndexRef.current = cats.length - 1
+  }, [cats.length])
 
   const updateCurrentIndex = (val) => {
     setCurrentIndex(val)
@@ -41,7 +46,6 @@ const Index = ({ cats }) => {
     }
   }
 
-  // increase current index and show card
   const goBack = async () => {
     if (!canGoBack) return
     const newIndex = currentIndex + 1
