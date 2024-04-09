@@ -64,6 +64,7 @@ footer {
   font-style: normal;
   height: 110px;
   position: sticky;
+  z-index: 1;
 }
 .nav-link {
   background-image: linear-gradient(#f55477, #f51955) !important;
@@ -73,6 +74,7 @@ footer {
   margin-top: 25px;
   margin-left: 4px;
   margin-right: 10px;
+
 }
 .nav-link:hover {
   transform: scale(1.05);
@@ -83,22 +85,25 @@ footer {
 }
 
 /* Home */
-.curved-text {
-  margin-top: -100px;
-}
-.home-logo {
+.home-page {
   display: flex;
-  margin-top: -1275px;
-  margin-left: 500px;
-  width: 30%;
-  height: 30%;
-  place-content: center;
+  justify-content: center;
+
 }
+.curved-text {
+position:fixed;
+margin-top: -80px;
+}
+  .home-logo {
+    height: 400px;
+    margin-top: 80px;
+  }
 .home-slider {
   display: flex;
   place-content: center;
+  height: 80px;
   margin-top: -80px;
-  margin-left: -10px;
+  position: sticky;
 }
 .home-slider:hover {
   transform: scale(1.05);
@@ -110,24 +115,6 @@ text {
   fill:#f55477 !important;
   font-weight: 800;
   font-style: normal;
-}
-
-/* Not Found */
-.image {
-  max-width:600px;
-  max-height: 600px;
-}
-.message {
-  width: 500px;
-  padding-top: 6rem;
-  padding-left: 1rem;
-  font-weight: 800;
-  font-style: normal;
-}
-.not-found-content {
-  display: flex;
-  justify-content: center;
-  height: 600px;
 }
 
 /* Index Card Swipe*/
@@ -289,6 +276,25 @@ margin-left: 255px;
 }
 .image-error {
   margin-left: 205px;
+}
+
+
+/* Not Found */
+.image {
+  max-width:600px;
+  max-height: 600px;
+}
+.message {
+  width: 500px;
+  padding-top: 6rem;
+  padding-left: 1rem;
+  font-weight: 800;
+  font-style: normal;
+}
+.not-found-content {
+  display: flex;
+  justify-content: center;
+  height: 600px;
 }
 
 /* Show */
