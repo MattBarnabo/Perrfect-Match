@@ -79,7 +79,6 @@ const CatEdit = ({cats, updateCat}) => {
               name="enjoys"
               placeholder="Enjoys"
               type="text"
-              maxLength={30}
               className="form-control input-field"
               {...register("enjoys", { required: true })}
             />

@@ -66,7 +66,6 @@ const CatNew = ({ createNewCat }) => {
             placeholder="Enjoys"
             type="text"
             className="form-control input-field"
-            maxLength={30}
             {...register("enjoys", { required: true })}
           />
           {errors.enjoys &&(

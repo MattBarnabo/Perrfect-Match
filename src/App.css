@@ -64,6 +64,7 @@ footer {
   font-style: normal;
   height: 110px;
   position: sticky;
+  z-index: 1;
 }
 .nav-link {
   background-image: linear-gradient(#f55477, #f51955) !important;
@@ -83,22 +84,24 @@ footer {
 }
 
 /* Home */
+.home-page {
+  display: flex;
+  justify-content: center;
+}
 .curved-text {
-  margin-top: -100px;
+position:fixed;
+margin-top: -80px;
 }
 .home-logo {
-  display: flex;
-  margin-top: -1275px;
-  margin-left: 500px;
-  width: 30%;
-  height: 30%;
-  place-content: center;
+    height: 400px;
+    margin-top: 80px;
 }
 .home-slider {
   display: flex;
   place-content: center;
+  height: 80px;
   margin-top: -80px;
-  margin-left: -10px;
+  position: sticky;
 }
 .home-slider:hover {
   transform: scale(1.05);
@@ -112,28 +115,17 @@ text {
   font-style: normal;
 }
 
-/* Not Found */
-.image {
-  max-width:600px;
-  max-height: 600px;
-}
-.message {
-  width: 500px;
-  padding-top: 6rem;
-  padding-left: 1rem;
-  font-weight: 800;
-  font-style: normal;
-}
-.not-found-content {
+/* Index Card Swipe*/
+.swipe-container {
+  width: auto;
+  margin-right: 270px;
+  height: 300px;
   display: flex;
   justify-content: center;
-  height: 600px;
 }
-
-/* Index Card Swipe*/
 .index-page {
-  width: auto;
-  height: 800px;
+  width: 100%;
+  height: 100vh;
 }
 h1 {
   text-align: center;
@@ -163,7 +155,7 @@ h1 {
   margin: 20px;
   display: flex;
   justify-content: center;
-  margin-top: 340px;
+  height: 70px;
 }
 .buttons button {
   flex-shrink: 0;
@@ -194,7 +186,6 @@ h1 {
 
 /* Index Card Flip */
 .flip-card-container {
-  margin-left: 590px;
   position: absolute !important;
 }
 .flip-card {
@@ -234,8 +225,18 @@ h1 {
 .flip-card-back-ul {
   list-style-type: none;
   text-align: center;
-padding-right: 50px;
-overflow: hidden;
+  padding-right: 50px;
+  overflow: hidden;
+}
+.index-enjoys-text {
+  width: 250px;
+  margin-top: -20px;
+  margin-left: -40px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: white;
 }
 .flip-card-front {
   background-color: #73d0ff;
@@ -255,24 +256,42 @@ overflow: hidden;
   text-align: center;
 }
 .row {
-display: flex;
-justify-content: center;
-text-align: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 .input-field {
   width:100% !important;
 }
 .enjoys-text {
-margin-left: 160px;
+  margin-left: 160px;
 }
 .image-text {
-margin-left: 255px;
+  margin-left: 255px;
 }
 .enjoys-error {
   margin-left: 225px;
 }
 .image-error {
   margin-left: 205px;
+}
+
+/* Not Found */
+.image {
+  max-width:600px;
+  max-height: 600px;
+}
+.message {
+  width: 500px;
+  padding-top: 6rem;
+  padding-left: 1rem;
+  font-weight: 800;
+  font-style: normal;
+}
+.not-found-content {
+  display: flex;
+  justify-content: center;
+  height: 600px;
 }
 
 /* Show */
