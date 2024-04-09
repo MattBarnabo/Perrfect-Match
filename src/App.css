@@ -74,7 +74,6 @@ footer {
   margin-top: 25px;
   margin-left: 4px;
   margin-right: 10px;
-
 }
 .nav-link:hover {
   transform: scale(1.05);
@@ -88,16 +87,15 @@ footer {
 .home-page {
   display: flex;
   justify-content: center;
-
 }
 .curved-text {
 position:fixed;
 margin-top: -80px;
 }
-  .home-logo {
+.home-logo {
     height: 400px;
     margin-top: 80px;
-  }
+}
 .home-slider {
   display: flex;
   place-content: center;
@@ -258,18 +256,18 @@ h1 {
   text-align: center;
 }
 .row {
-display: flex;
-justify-content: center;
-text-align: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 .input-field {
   width:100% !important;
 }
 .enjoys-text {
-margin-left: 160px;
+  margin-left: 160px;
 }
 .image-text {
-margin-left: 255px;
+  margin-left: 255px;
 }
 .enjoys-error {
   margin-left: 225px;
@@ -277,7 +275,6 @@ margin-left: 255px;
 .image-error {
   margin-left: 205px;
 }
-
 
 /* Not Found */
 .image {
