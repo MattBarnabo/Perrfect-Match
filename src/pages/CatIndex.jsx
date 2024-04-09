@@ -76,8 +76,11 @@ const Index = ({ cats }) => {
                         <h4>Age: {cat.age}</h4>
                       </li>
                       <li>
-                        <p className="index-enjoys">Enjoys: {cat.enjoys}</p>
+                        <p className="index-enjoys-title">Enjoys:</p>
                       </li>
+                      <li>
+                        <p className="index-enjoys-text">{cat.enjoys}</p>
+                        </li>
                       <li>
                         <NavButton className= "flip-card-button"
                         url={`/cat-show/${cat.id}`}
@@ -87,8 +90,8 @@ const Index = ({ cats }) => {
                     </ul>
                   </div>
                   <div
-                    style={{ backgroundImage: 
-                    "url(" + cat.image + ")" }} 
+                    style={{ backgroundImage:
+                    "url(" + cat.image + ")" }}
                     aria-label={ `Profile of a cat named ${cat.name}`}
                     className="flip-card-front card"
                   >
